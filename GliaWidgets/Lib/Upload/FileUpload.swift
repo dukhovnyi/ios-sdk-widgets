@@ -1,3 +1,5 @@
+import Foundation
+
 class FileUpload {
     enum Error {
         case fileTooBig
@@ -51,6 +53,8 @@ class FileUpload {
     let state = ObservableValue<State>(with: .none)
     let localFile: LocalFile
 
+    lazy var uuid = environment.uuid()
+
     private let storage: DataStorage
     private let environment: Environment
 
@@ -92,14 +96,9 @@ class FileUpload {
     }
 }
 
-extension FileUpload: Equatable {
-    static func == (lhs: FileUpload, rhs: FileUpload) -> Bool {
-        return lhs.localFile == rhs.localFile
-    }
-}
-
 extension FileUpload {
     struct Environment {
         var uploadFileToEngagement: CoreSdkClient.UploadFileToEngagement
+        var uuid: () -> UUID
     }
 }
