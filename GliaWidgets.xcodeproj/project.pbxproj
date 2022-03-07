@@ -239,6 +239,15 @@
 		C4F176CD261D1543009D9F07 /* ChatFileDownloadContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F176CB261D1543009D9F07 /* ChatFileDownloadContentView.swift */; };
 		C4F176CE261D1543009D9F07 /* ChatFileDownloadContentStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F176CC261D1543009D9F07 /* ChatFileDownloadContentStyle.swift */; };
 		EB750F53273BA9BB00BE5FBD /* GliaError.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB750F52273BA9BB00BE5FBD /* GliaError.swift */; };
+		EB8683F327D5FBDF004E8959 /* SurveyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8683F227D5FBDF004E8959 /* SurveyViewModel.swift */; };
+		EB8683F627D5FCBC004E8959 /* SurveyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8683F527D5FCBC004E8959 /* SurveyView.swift */; };
+		EB8683F827D5FCC3004E8959 /* SurveyStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8683F727D5FCC3004E8959 /* SurveyStyle.swift */; };
+		EB8683FB27D60053004E8959 /* SurveyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8683FA27D60053004E8959 /* SurveyViewController.swift */; };
+		EB8683FE27D60144004E8959 /* Theme+Survey.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8683FD27D60144004E8959 /* Theme+Survey.swift */; };
+		EB86840127D60588004E8959 /* SurveyTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB86840027D60588004E8959 /* SurveyTitleView.swift */; };
+		EB86840527D606F0004E8959 /* UIEdgeInsets+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB86840427D606F0004E8959 /* UIEdgeInsets+Extensions.swift */; };
+		EB86840827D63EF9004E8959 /* SurveyButtonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB86840727D63EF9004E8959 /* SurveyButtonsView.swift */; };
+		EB86840B27D63F0E004E8959 /* SurveyQuestionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB86840A27D63F0E004E8959 /* SurveyQuestionsView.swift */; };
 		FD01A52B483418AB02DCFBFC /* Pods_GliaWidgets.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85639A838514258D976E1B2A /* Pods_GliaWidgets.framework */; };
 /* End PBXBuildFile section */
 
@@ -526,6 +535,15 @@
 		C4F176CB261D1543009D9F07 /* ChatFileDownloadContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatFileDownloadContentView.swift; sourceTree = "<group>"; };
 		C4F176CC261D1543009D9F07 /* ChatFileDownloadContentStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatFileDownloadContentStyle.swift; sourceTree = "<group>"; };
 		EB750F52273BA9BB00BE5FBD /* GliaError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GliaError.swift; sourceTree = "<group>"; };
+		EB8683F227D5FBDF004E8959 /* SurveyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyViewModel.swift; sourceTree = "<group>"; };
+		EB8683F527D5FCBC004E8959 /* SurveyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyView.swift; sourceTree = "<group>"; };
+		EB8683F727D5FCC3004E8959 /* SurveyStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyStyle.swift; sourceTree = "<group>"; };
+		EB8683FA27D60053004E8959 /* SurveyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyViewController.swift; sourceTree = "<group>"; };
+		EB8683FD27D60144004E8959 /* Theme+Survey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Theme+Survey.swift"; sourceTree = "<group>"; };
+		EB86840027D60588004E8959 /* SurveyTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyTitleView.swift; sourceTree = "<group>"; };
+		EB86840427D606F0004E8959 /* UIEdgeInsets+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIEdgeInsets+Extensions.swift"; sourceTree = "<group>"; };
+		EB86840727D63EF9004E8959 /* SurveyButtonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyButtonsView.swift; sourceTree = "<group>"; };
+		EB86840A27D63F0E004E8959 /* SurveyQuestionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyQuestionsView.swift; sourceTree = "<group>"; };
 		F08274A374F775EE39BFBDB1 /* Pods-GliaWidgetsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GliaWidgetsTests.debug.xcconfig"; path = "Target Support Files/Pods-GliaWidgetsTests/Pods-GliaWidgetsTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -858,6 +876,7 @@
 		1A4674C525ED08030078FA1C /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				EB8683F127D5FBD4004E8959 /* Survey */,
 				C49A29D92614A22600819269 /* QuickLook */,
 				1A2DA71D25EF71F100032611 /* FilePicker */,
 				1A4674C625ED083A0078FA1C /* MediaPicker */,
@@ -1093,6 +1112,7 @@
 				1A4AD3C3256E7A0C00468BFB /* ThemeFontStyle.swift */,
 				1A4AD3C6256E863900468BFB /* ThemeColor.swift */,
 				1A4AD3C9256E864800468BFB /* ThemeColorStyle.swift */,
+				EB8683FD27D60144004E8959 /* Theme+Survey.swift */,
 			);
 			path = Theme;
 			sourceTree = "<group>";
@@ -1286,6 +1306,7 @@
 				1A0C9AC725C9493D00815406 /* Int+Extensions.swift */,
 				1A0EDF6C25E7AC100076D1AD /* UIImage+Extensions.swift */,
 				C4C2A16F2670E848003AC039 /* UIViewController+Extensions.swift */,
+				EB86840427D606F0004E8959 /* UIEdgeInsets+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -1318,6 +1339,7 @@
 		1A63B2EF257A3EF100508478 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				EB8683F927D6004B004E8959 /* Survey */,
 				1A5892AF2608C66300E183CC /* QuickLook */,
 				C47901AD25ED2E59007EE195 /* ScreenShare */,
 				1A2DA72425EF891300032611 /* FilePicker */,
@@ -1332,6 +1354,7 @@
 		1A63B2F0257A3F0F00508478 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				EB8683F427D5FCB4004E8959 /* Survey */,
 				1AA738B025790D4B00E1120F /* Alert */,
 			);
 			path = Common;
@@ -1665,6 +1688,58 @@
 				C4F176CC261D1543009D9F07 /* ChatFileDownloadContentStyle.swift */,
 			);
 			path = Download;
+			sourceTree = "<group>";
+		};
+		EB8683F127D5FBD4004E8959 /* Survey */ = {
+			isa = PBXGroup;
+			children = (
+				EB8683F227D5FBDF004E8959 /* SurveyViewModel.swift */,
+			);
+			path = Survey;
+			sourceTree = "<group>";
+		};
+		EB8683F427D5FCB4004E8959 /* Survey */ = {
+			isa = PBXGroup;
+			children = (
+				EB86840927D63EFE004E8959 /* Questions */,
+				EB86840627D63EE4004E8959 /* Buttons */,
+				EB8683FF27D60582004E8959 /* Title */,
+				EB8683F527D5FCBC004E8959 /* SurveyView.swift */,
+				EB8683F727D5FCC3004E8959 /* SurveyStyle.swift */,
+			);
+			path = Survey;
+			sourceTree = "<group>";
+		};
+		EB8683F927D6004B004E8959 /* Survey */ = {
+			isa = PBXGroup;
+			children = (
+				EB8683FA27D60053004E8959 /* SurveyViewController.swift */,
+			);
+			path = Survey;
+			sourceTree = "<group>";
+		};
+		EB8683FF27D60582004E8959 /* Title */ = {
+			isa = PBXGroup;
+			children = (
+				EB86840027D60588004E8959 /* SurveyTitleView.swift */,
+			);
+			path = Title;
+			sourceTree = "<group>";
+		};
+		EB86840627D63EE4004E8959 /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				EB86840727D63EF9004E8959 /* SurveyButtonsView.swift */,
+			);
+			path = Buttons;
+			sourceTree = "<group>";
+		};
+		EB86840927D63EFE004E8959 /* Questions */ = {
+			isa = PBXGroup;
+			children = (
+				EB86840A27D63F0E004E8959 /* SurveyQuestionsView.swift */,
+			);
+			path = Questions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -2015,9 +2090,11 @@
 				1A0C9A7F25C1732F00815406 /* Theme+MinimizedBubble.swift in Sources */,
 				1A60AF7E25656F0400E53F53 /* Glia.swift in Sources */,
 				1A60AFB62566825400E53F53 /* ViewModel.swift in Sources */,
+				EB86840827D63EF9004E8959 /* SurveyButtonsView.swift in Sources */,
 				1A0C9AE025C9624500815406 /* ObservableValue.swift in Sources */,
 				1A60AFB9256682AF00E53F53 /* FlowCoordinator.swift in Sources */,
 				9A66172A27A94826001C8E03 /* CoreSDKClient.Live.swift in Sources */,
+				EB8683FE27D60144004E8959 /* Theme+Survey.swift in Sources */,
 				1A0C9A9125C41AB900815406 /* CallButtonBar.swift in Sources */,
 				1AE15E3B257A5CC900A642C0 /* AlertConfiguration.swift in Sources */,
 				1A60AF9F25667CA800E53F53 /* FontProvider.swift in Sources */,
@@ -2042,6 +2119,7 @@
 				1A1E309B25F8E1F700850E68 /* DataStorage.swift in Sources */,
 				1A0452E325DBD0B4000DA0C1 /* HeaderButtonStyle.swift in Sources */,
 				1A5F813C2588B72100A605DA /* ChatMessageEntryView.swift in Sources */,
+				EB8683F827D5FCC3004E8959 /* SurveyStyle.swift in Sources */,
 				1A4674A725E905AC0078FA1C /* AttachmentSourceListView.swift in Sources */,
 				1A60B02D256BF7FF00E53F53 /* OperatorChatMessageView.swift in Sources */,
 				C43C12F92694B14900C37E1B /* GliaPresenter.swift in Sources */,
@@ -2051,11 +2129,13 @@
 				1A60AFBF2566834400E53F53 /* ViewController.swift in Sources */,
 				6E60DD5627146C9D001422EF /* AlertViewController+SingleAction.swift in Sources */,
 				1A60AFF12566A4B300E53F53 /* NavigationPresenter.swift in Sources */,
+				EB86840527D606F0004E8959 /* UIEdgeInsets+Extensions.swift in Sources */,
 				1AC7A74F2582571100567FF8 /* Interactor.swift in Sources */,
 				1A1E30CB25F9FDC400850E68 /* ChatImageFileContentStyle.swift in Sources */,
 				1A60AF93256674F900E53F53 /* Color.swift in Sources */,
 				1A38A8BA258B94D60089DE7B /* ImageView.swift in Sources */,
 				1A60B031256BF81500E53F53 /* VisitorChatMessageView.swift in Sources */,
+				EB86840127D60588004E8959 /* SurveyTitleView.swift in Sources */,
 				1A5892B12608C68000E183CC /* QuickLookController.swift in Sources */,
 				9A66172727A94587001C8E03 /* CoreSDKClient.Interface.swift in Sources */,
 				9AB196EE27C64C4000FD60AB /* GCD.Live.swift in Sources */,
@@ -2065,6 +2145,7 @@
 				C4C2A1702670E848003AC039 /* UIViewController+Extensions.swift in Sources */,
 				1A6EB05725A717CB0007081A /* ChatMessage.swift in Sources */,
 				1AA738B225790D5A00E1120F /* AlertView.swift in Sources */,
+				EB8683F327D5FBDF004E8959 /* SurveyViewModel.swift in Sources */,
 				C47901B725ED2FB0007EE195 /* AlertViewController+ScreenShareOffer.swift in Sources */,
 				1A8366B025FF40AB005FE7EE /* LocalFile.swift in Sources */,
 				9A3E1D8A27B6B824005634EB /* FileDownload.Environment.Interface.swift in Sources */,
@@ -2093,6 +2174,8 @@
 				1A4674BC25E91B930078FA1C /* PopoverPresenter.swift in Sources */,
 				1ABD6CAC25B71D1B00D56EFA /* CallViewModel.swift in Sources */,
 				1A0EDF5A25E786DB0076D1AD /* FileUploadStyle.swift in Sources */,
+				EB8683FB27D60053004E8959 /* SurveyViewController.swift in Sources */,
+				EB86840B27D63F0E004E8959 /* SurveyQuestionsView.swift in Sources */,
 				1A6075E02582209100569B0E /* UserImageView.swift in Sources */,
 				1AC7A7AF258786CB00567FF8 /* EngagementViewModel.swift in Sources */,
 				1A6EBB2525ADE36900EE325D /* MediaUpgradePresenter.swift in Sources */,
@@ -2114,6 +2197,7 @@
 				C47901AF25ED2E70007EE195 /* ScreenShareOfferPresenter.swift in Sources */,
 				1A60AFDD25669A4200E53F53 /* ChatView.swift in Sources */,
 				1A0C9A6725C16DC400815406 /* Theme+Chat.swift in Sources */,
+				EB8683F627D5FCBC004E8959 /* SurveyView.swift in Sources */,
 				1A0C9AC225C9400000815406 /* CallDurationCounter.swift in Sources */,
 				1AFB1E6225F7AE1300CA460D /* ChatEngagementFile.swift in Sources */,
 				1AA738AE2578E0D500E1120F /* ConnectAnimationView.swift in Sources */,

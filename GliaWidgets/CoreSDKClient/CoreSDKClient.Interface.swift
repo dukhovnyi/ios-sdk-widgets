@@ -151,6 +151,7 @@ extension CoreSdkClient {
     typealias SingleChoiceOption = SalemoveSDK.SingleChoiceOption
     typealias StreamView = SalemoveSDK.StreamView
     typealias SuccessBlock = SalemoveSDK.SuccessBlock
+    typealias Survey = SalemoveSDK.Survey
     typealias VideoStreamable = SalemoveSDK.VideoStreamable
     typealias VideoStreamAddedBlock = SalemoveSDK.VideoStreamAddedBlock
     typealias VisitorContext = SalemoveSDK.VisitorContext

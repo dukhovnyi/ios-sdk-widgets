@@ -23,19 +23,22 @@ public class Theme {
     public let font: ThemeFont
 
     /// Chat view style.
-    public lazy var chat: ChatStyle = { return chatStyle }()
+    public lazy var chat: ChatStyle = { chatStyle }()
 
     /// Call view style.
-    public lazy var call: CallStyle = { return callStyle }()
+    public lazy var call: CallStyle = { callStyle }()
 
     /// Alert view style.
-    public lazy var alert: AlertStyle = { return alertStyle }()
+    public lazy var alert: AlertStyle = { alertStyle }()
+
+    /// Survey view style
+    public lazy var survey: SurveyStyle = { surveyStyle }()
 
     /// Configurations for the alerts.
-    public lazy var alertConfiguration: AlertConfiguration = { return alertConfigurationStyle }()
+    public lazy var alertConfiguration: AlertConfiguration = { alertConfigurationStyle }()
 
     /// Style of the minimized bubble.
-    public lazy var minimizedBubble: BubbleStyle = { return minimizedBubbleStyle }()
+    public lazy var minimizedBubble: BubbleStyle = { minimizedBubbleStyle }()
 
     /// Controls the visibility of the "Powered by" text and image.
     public var showsPoweredBy: Bool

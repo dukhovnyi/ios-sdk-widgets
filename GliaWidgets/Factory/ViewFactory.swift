@@ -13,7 +13,7 @@ class ViewFactory {
     }
 
     func makeChatView() -> ChatView {
-        return ChatView(
+        ChatView(
             with: theme.chat,
             environment: .init(
                 data: environment.data,
@@ -24,7 +24,7 @@ class ViewFactory {
     }
 
     func makeCallView() -> CallView {
-        return CallView(
+        CallView(
             with: theme.call,
             environment: .init(
                 data: environment.data,
@@ -35,11 +35,11 @@ class ViewFactory {
     }
 
     func makeAlertView() -> AlertView {
-        return AlertView(with: theme.alert)
+        AlertView(with: theme.alert)
     }
 
     func makeBubbleView() -> BubbleView {
-        return BubbleView(
+        BubbleView(
             with: theme.minimizedBubble,
             environment: .init(
                 data: environment.data,
@@ -47,6 +47,10 @@ class ViewFactory {
                 gcd: environment.gcd
             )
         )
+    }
+
+    func makeSurveyView() -> SurveyView {
+        SurveyView(style: theme.survey)
     }
 }
 
