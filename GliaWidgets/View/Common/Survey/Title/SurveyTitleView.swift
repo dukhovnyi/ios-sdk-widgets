@@ -7,10 +7,10 @@ final class SurveyTitleView: UIView {
         }
     }
 
-    private let style: SurveyStyle.Title
+    private let style: SurveyStyle.TitleStyle
     private let label = UILabel()
 
-    init(style: SurveyStyle.Title) {
+    init(style: SurveyStyle.TitleStyle) {
         self.style = style
 
         super.init(frame: .zero)

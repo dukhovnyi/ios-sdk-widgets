@@ -12,6 +12,8 @@ final class SurveyViewController: ViewController {
         self.viewFactory = viewFactory
 
         super.init(nibName: nil, bundle: nil)
+
+        modalPresentationStyle = .fullScreen
     }
 
     @available(*, unavailable)
@@ -33,10 +35,34 @@ final class SurveyViewController: ViewController {
     }
 
     private func bind(view: SurveyView, viewModel: SurveyViewModel) {
+        view.buttonsView.onCancel = { [weak viewModel] in
+            viewModel?.event(.cancel)
+        }
+
+        view.buttonsView.onSubmit = { [weak viewModel] in
+            viewModel?.event(.submit)
+        }
+
         viewModel.action = { [weak view] action in
             switch action {
             case .setTitle(let title):
-                view?.title = title
+                view?.titleView.title = title
+
+            case .addScaleQuestion(
+                let item,
+                let scale,
+                let answer
+            ): break
+
+            case .addTextQuestion(
+                let item,
+                let answer
+            ): break
+
+            case .addBooleanQuestion(
+                let item,
+                let answer
+            ): break
             }
         }
     }

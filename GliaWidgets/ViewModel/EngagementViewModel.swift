@@ -87,6 +87,10 @@ class EngagementViewModel {
 
     func interactorEvent(_ event: InteractorEvent) {
         switch event {
+        case .survey(let survey, let engagementId):
+            engagementAction?(
+                .showSurvey(survey: survey, engagementId: engagementId)
+            )
         case .stateChanged(let state):
             stateChanged(state)
         case .error(let error):
@@ -315,6 +319,10 @@ extension EngagementViewModel {
         )
         case showEndButton
         case showEndScreenShareButton
+        case showSurvey(
+            survey: CoreSdkClient.Survey,
+            engagementId: String
+        )
     }
 
     enum DelegateEvent {

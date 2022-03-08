@@ -1,6 +1,8 @@
 import UIKit
+import PureLayout
 
-final class SurveyQuestionsView: UIView {
+final class SurveyTextQuestionView: UIView {
+    private let textView = UITextView()
     private let stackView = UIStackView()
 
     init() {
@@ -15,16 +17,15 @@ final class SurveyQuestionsView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
 
-    func addScaleQuestion() {
-
-    }
-
     private func setup() {
         stackView.axis = .vertical
     }
 
     private func layout() {
         addSubview(stackView)
-        stackView.autoPinEdgesToSuperviewEdges(with: .uniform(24))
+        stackView.autoPinEdgesToSuperviewEdges()
+
+        stackView.addArrangedSubview(textView)
+        textView.autoSetDimension(.height, toSize: 96)
     }
 }

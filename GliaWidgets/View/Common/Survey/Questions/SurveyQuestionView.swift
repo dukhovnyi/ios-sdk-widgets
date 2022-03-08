@@ -1,7 +1,9 @@
 import UIKit
 
-final class SurveyQuestionsView: UIView {
+final class SurveyQuestionView: UIView {
+    private let titleLabel = UILabel()
     private let stackView = UIStackView()
+    private let errorLabel = UILabel()
 
     init() {
         super.init(frame: .zero)
@@ -15,16 +17,6 @@ final class SurveyQuestionsView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
 
-    func addScaleQuestion() {
-
-    }
-
-    private func setup() {
-        stackView.axis = .vertical
-    }
-
-    private func layout() {
-        addSubview(stackView)
-        stackView.autoPinEdgesToSuperviewEdges(with: .uniform(24))
-    }
+    private func setup() {}
+    private func layout() {}
 }

@@ -59,7 +59,29 @@ class EngagementViewController: ViewController, AlertPresenter {
                 view.header.showEndButton()
             case .showEndScreenShareButton:
                 view.header.showEndScreenSharingButton()
+            case .showSurvey(let survey, let engagementId):
+                self.showSurvey(survey: survey, engagementId: engagementId)
             }
         }
+    }
+
+    private func showSurvey(
+        survey: CoreSdkClient.Survey,
+        engagementId: String
+    ) {
+        let viewModel = SurveyViewModel(
+            survey: survey,
+            engagementId: engagementId,
+            environment: .init(
+                submitSurveyAnswer: CoreSdkClient.live.submitSurveyAnswer
+            )
+        )
+        
+        let viewController = SurveyViewController(
+            viewModel: viewModel,
+            viewFactory: viewFactory
+        )
+
+        present(viewController, animated: true)
     }
 }

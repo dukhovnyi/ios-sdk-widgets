@@ -100,3 +100,6 @@
 "call.buttons.mute.active.title" = "Unmute";
 "call.buttons.speaker.title" = "Speaker";
 "call.buttons.minimize.title" = "Minimize";
+
+"survey.action.cancel" = "Cancel";
+"survey.action.submit" = "Submit";

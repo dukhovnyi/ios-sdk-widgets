@@ -28,6 +28,10 @@ enum InteractorEvent {
     case screenShareError(error: CoreSdkClient.SalemoveError)
     case screenSharingStateChanged(to: CoreSdkClient.VisitorScreenSharingState)
     case error(CoreSdkClient.SalemoveError)
+    case survey(
+        survey: CoreSdkClient.Survey,
+        engagementId: String
+    )
 }
 
 class Interactor {
@@ -332,14 +336,31 @@ extension Interactor: CoreSdkClient.Interactable {
 
     func end() {
         // Example how to fetch survey:
-        //  guard let engagement = environment.coreSdk.getCurrentEngagement() else { return }
-        //  engagement.getSurvey { print("\($0)") }
+        guard
+            let engagement = environment.coreSdk.getCurrentEngagement()
+        else { return }
 
+        engagement.getSurvey { [weak self] in
+            switch $0 {
+            case .success(let survey):
+                if let survey = survey, survey.type == .visitor {
+                    self?.notify(
+                        .survey(survey: survey, engagementId: engagement.id)
+                    )
+                }
+
+            case .failure:
+                break
+            }
+        }
+
+        /*
         if isEngagementEndedByVisitor {
             state = .ended(.byVisitor)
         } else {
             state = .ended(.byOperator)
         }
+         */
     }
 
     func fail(error: CoreSdkClient.SalemoveError) {

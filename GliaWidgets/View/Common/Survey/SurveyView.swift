@@ -2,28 +2,22 @@ import UIKit
 import PureLayout
 
 final class SurveyView: UIView {
-    var title: String? {
-        didSet {
-            titleView.title = title
-        }
-    }
+    lazy var titleView: SurveyTitleView = {
+        SurveyTitleView(style: style.title)
+    }()
+
+    lazy var questionsView: SurveyQuestionsView = {
+        SurveyQuestionsView()
+    }()
+
+    lazy var buttonsView: SurveyButtonsView = {
+        SurveyButtonsView(style: style.buttons)
+    }()
 
     private let style: SurveyStyle
     private let contentView = UIView()
     private let contentStackView = UIStackView()
     private let questionsScrollView = UIScrollView()
-
-    private lazy var questionsView: SurveyQuestionsView = {
-        SurveyQuestionsView()
-    }()
-
-    private lazy var buttonsView: SurveyButtonsView = {
-        SurveyButtonsView()
-    }()
-
-    private lazy var titleView: SurveyTitleView = {
-        SurveyTitleView(style: style.title)
-    }()
 
     init(style: SurveyStyle) {
         self.style = style
