@@ -114,7 +114,8 @@ extension Theme {
             backgroundColor: color.primary,
             accessibility: .init(
                 contentAccessibilityLabel: Accessibility.Message.attachmentMessageLabel,
-                youAccessibilityPlaceholder: Accessibility.Message.you
+                youAccessibilityPlaceholder: Accessibility.Message.you,
+                isFontScalingEnabled: true
             )
         )
         let visitorMessage = VisitorChatMessageStyle(
@@ -134,7 +135,8 @@ extension Theme {
             backgroundColor: Color.lightGrey,
             accessibility: .init(
                 contentAccessibilityLabel: Accessibility.Message.attachmentMessageLabel,
-                youAccessibilityPlaceholder: Accessibility.Message.you
+                youAccessibilityPlaceholder: Accessibility.Message.you,
+                isFontScalingEnabled: true
             )
         )
         let operatorMessage = OperatorChatMessageStyle(
@@ -156,7 +158,8 @@ extension Theme {
             backgroundColor: color.baseLight,
             accessibility: .init(
                 contentAccessibilityLabel: Accessibility.Message.attachmentMessageLabel,
-                youAccessibilityPlaceholder: Accessibility.Message.you
+                youAccessibilityPlaceholder: Accessibility.Message.you,
+                isFontScalingEnabled: true
             )
         )
         let choiceCardOptionNormalState = ChoiceCardOptionStateStyle(
@@ -228,7 +231,10 @@ extension Theme {
             durationFont: font.bodyText,
             durationColor: color.baseNormal,
             borderColor: color.baseShade,
-            accessibility: .init(durationTextHint: Accessibility.ChatCallUpgrade.Audio.Duration.hint)
+            accessibility: .init(
+                durationTextHint: Accessibility.ChatCallUpgrade.Audio.Duration.hint,
+                isFontScalingEnabled: true
+            )
         )
         let videoUpgrade = ChatCallUpgradeStyle(
             icon: Asset.upgradeVideo.image,
@@ -239,7 +245,10 @@ extension Theme {
             durationFont: font.bodyText,
             durationColor: color.baseNormal,
             borderColor: color.baseShade,
-            accessibility: .init(durationTextHint: Accessibility.ChatCallUpgrade.Video.Duration.hint)
+            accessibility: .init(
+                durationTextHint: Accessibility.ChatCallUpgrade.Video.Duration.hint,
+                isFontScalingEnabled: true
+            )
         )
         let userImage = UserImageStyle(
             placeholderImage: Asset.operatorPlaceholder.image,
@@ -405,7 +414,8 @@ extension Theme {
             borderColor: Color.lightGrey,
             accessibility: .init(
                 contentAccessibilityLabel: Accessibility.Message.attachmentMessageLabel,
-                youAccessibilityPlaceholder: Accessibility.Message.you
+                youAccessibilityPlaceholder: Accessibility.Message.you,
+                isFontScalingEnabled: true
             ),
             downloadAccessibility: .init(
                 noneState: Accessibility.Download.State.none,

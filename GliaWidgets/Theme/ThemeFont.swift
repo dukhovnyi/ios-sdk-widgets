@@ -55,4 +55,63 @@ public struct ThemeFont {
         self.caption = caption ?? Font.regular(12)
         self.buttonLabel = buttonLabel ?? Font.regular(16)
     }
+
+    init() {
+        let fontScaling = FontScaling.theme
+        self.header1 = fontScaling.uiFont(with: .title1) // header1 ?? Font.bold(24) // .title1
+        self.header2 = fontScaling.uiFont(with: .title2) // header2 ?? Font.regular(20) // .title2
+        self.header3 = fontScaling.uiFont(with: .title3) // header3 ?? Font.medium(18) // .title3
+        self.bodyText = fontScaling.uiFont(with: .body) // bodyText ?? Font.regular(16) // .body
+        self.subtitle = fontScaling.uiFont(with: .footnote) // subtitle ?? Font.regular(14) // .footnote
+        self.mediumSubtitle = fontScaling.uiFont(with: .subheadline)// mediumSubtitle ?? Font.medium(14) // .subheadline
+        self.caption = fontScaling.uiFont(with: .caption1) // caption ?? Font.regular(12) // .caption1
+        self.buttonLabel = fontScaling.uiFont(with: .body)// buttonLabel ?? Font.regular(16) // .body
+    }
+}
+
+extension FontScaling {
+    static let theme = Self(
+        descriptions: .init(
+            uniqueKeysWithValues: Style
+                .allCases
+                .map { style in (style, style.themeFontDescription()) }
+        ),
+        environment: .live
+    )
+}
+
+extension FontScaling.Description {
+    init(name: FontProvider.FontName, size: Double) {
+        self.init(name: name.rawValue, size: size)
+    }
+}
+
+extension FontScaling.Style {
+    func themeFontDescription() -> FontScaling.Description {
+        #warning("TODO: remove hints-comments")
+        switch self {
+        case .body:
+            return .init(name: .robotoRegular, size: 16) // bodyText ?? Font.regular(16)
+        case .callout:
+            return .init(name: .robotoRegular, size: 15)
+        case .caption1:
+            return .init(name: .robotoRegular, size: 12) // caption ?? Font.regular(12)
+        case .caption2:
+            return .init(name: .robotoRegular, size: 11)
+        case .footnote:
+            return .init(name: .robotoRegular, size: 14)  // subtitle ?? Font.regular(14) // ???
+        case .headline:
+            return .init(name: .robotoBold, size: 17)
+        case .largeTitle:
+            return .init(name: .robotoRegular, size: 34)
+        case .subheadline:
+            return .init(name: .robotoMedium, size: 14) // mediumSubtitle ?? Font.medium(14)
+        case .title1:
+            return .init(name: .robotoBold, size: 24) // header1 ?? Font.bold(24)
+        case .title2:
+            return .init(name: .robotoRegular, size: 20) // header2 ?? Font.regular(20)
+        case .title3:
+            return .init(name: .robotoMedium, size: 18) // header3 ?? Font.medium(18)
+        }
+    }
 }
