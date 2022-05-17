@@ -147,8 +147,6 @@ class ChatViewModel: EngagementViewModel, ViewModel {
             if case .startEngagement = self.startAction, self.environment.chatStorage.isEmpty() {
                 self.enqueue(mediaType: .text)
             }
-
-            self.update(for: self.interactor.state)
         }
     }
 
@@ -248,6 +246,7 @@ extension ChatViewModel {
 
     private func onEngagementTransferred() {
         action?(.setMessageEntryEnabled(true))
+        action?(.setCallBubbleImage(imageUrl: interactor.engagedOperator?.picture?.url))
 
         guard let transferringItemIndex = messagesSection.items.firstIndex(where: {
             switch $0.kind {
@@ -849,6 +848,7 @@ extension ChatViewModel {
             declined: () -> Void
         )
         case showCallBubble(imageUrl: String?)
+        case setCallBubbleImage(imageUrl: String?)
         case updateUnreadMessageIndicator(itemCount: Int)
         case setOperatorTypingIndicatorIsHiddenTo(Bool, _ isChatScrolledToBottom: Bool)
         case setIsAttachmentButtonHidden(Bool)
