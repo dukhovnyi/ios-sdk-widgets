@@ -118,6 +118,8 @@ class ChatViewController: EngagementViewController, MediaUpgradePresenter,
                 view.setConnectState(.transferring, animated: true)
             case .setCallBubbleImage(let imageUrl):
                 view.setCallBubbleImage(with: imageUrl)
+            case .setUnreadMessageIndicatorImage(let imageUrl):
+                view.unreadMessageIndicatorView.setImage(fromUrl: imageUrl, animated: true)
             }
         }
     }
